@@ -2,7 +2,8 @@
     "name": "Princess Sunim 2",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "storyboard": "*"
     },
     "files": [
         "main.blocks",

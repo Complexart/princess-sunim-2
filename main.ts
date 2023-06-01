@@ -1,6 +1,29 @@
 namespace SpriteKind {
     export const NPC = SpriteKind.create()
 }
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    NPC_Party = sprites.create(img`
+        . . . . . . f f f f f . . . . . 
+        . . . . . f e e e e e f . . . . 
+        . . . . f e e d d d d d f . . . 
+        . . . f f e d f f d d f f f . . 
+        . . f d d e d d d d e e d d c . 
+        . f f f d e d d c d d d d c c . 
+        f d b f d e d d d c c c c d c . 
+        f d d f f e e d d d d d d c . . 
+        f f f e f f e e d d d d c . . . 
+        . . f e e e f e e f f f . . . . 
+        . f f f e e e e e e e f . . . . 
+        . f e f f f e e e e e e f . . . 
+        . f e f f f f f e e e e f f . . 
+        . f e f f f b b f e e f d b f . 
+        . f f f f b d d f e e f d d f . 
+        . . f f f f f f f f f f f f f . 
+        `, SpriteKind.Enemy)
+    NPC_Party.setPosition(78, 33)
+})
+let NPC_Party: Sprite = null
+game.showLongText("Hello", DialogLayout.Bottom)
 scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
@@ -158,23 +181,3 @@ let NPC_Princess = sprites.create(img`
     ......6999696dd666dd66999996....
     `, SpriteKind.NPC)
 NPC_Princess.setPosition(131, 90)
-let NPC_Party = sprites.create(img`
-    . . . . . f f f f f . . . . . . 
-    . . . . f e e e e e f . . . . . 
-    . . . f d d d d d e e f . . . . 
-    . . f f f d d f f d e f f . . . 
-    . c d d e e d d d d e d d f . . 
-    . c c d d d d c d d e d f f f . 
-    . c d c c c c d d d e d f b d f 
-    . . c d d d d d d e e f f d d f 
-    . . . c d d d d e e f f e f f f 
-    . . . . f f f e e f e e e f . . 
-    . . . . f e e e e e e e f f f . 
-    . . . f e e e e e e f f f e f . 
-    . . f f e e e e f f f f f e f . 
-    . f b d f e e f b b f f f e f . 
-    . f d d f e e f d d b f f f f . 
-    . f f f f f f f f f f f f f . . 
-    `, SpriteKind.Enemy)
-NPC_Party.setPosition(142, 90)
-NPC_Party.x = 50
